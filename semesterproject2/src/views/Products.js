@@ -1,16 +1,42 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useState } from "react";
+import { useEffect } from "react";
+import { baseUrl } from "../settings/api.js";
+import Products from "../components/Products";
 
+const productsUrl = baseUrl + "/products";
 
 
 const Productspage = () => {
+
+  const [products, setProducts] = useState([]);
+
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch(productsUrl);
+      const json = await response.json();
+      setProducts(json);
+      console.log(json)
+
+  } catch (error) {
+      console.log(error);
+  }
+  }
+
+  useEffect(() => {
+    fetchProducts();
+  }, [])
+
+
     return (
       <>
             <Navbar />
             <div className="wrapper">
-        <div className="body-container"></div>
-            </div>
+          <div className="body-container"> {products.map((prod, i) => (<Products data={prod}/>))}</div>
+         
+      </div>
             <Footer/>
       </>
     );
