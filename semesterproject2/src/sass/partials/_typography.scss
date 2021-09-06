@@ -1,0 +1,26 @@
+h2 {
+    font-family: $font-primary;
+    font-size: 28x;
+    color: $color-white;
+  }
+  h5 {
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-family: $font-primary;
+    font-size: 12px;
+  }
+  a {
+    color: $color-link;
+    text-decoration: none;
+    font-family: $font-secondary;
+  }
+  p {
+    font-family: $font-primary;
+    font-size: 14px;
+    color: $color-black;
+  }
+  

@@ -1,0 +1,58 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .footer-item {
+    flex: 1;
+    margin: 20px;
+  }
+  .footer-item-inner {
+    max-width: 300px;
+    margin: auto;
+  }
+  .form-wrapper {
+    position: relative;
+  }
+  .newsletter {
+    padding: 5px;
+    width: 190px;
+    font-family: $font-secondary;
+    font-size: 12px;
+  }
+  // Button
+  .register {
+    position: absolute;
+    top: -15px;
+    transform: translateX(-15%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $color-secondary;
+    border: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    text-align: center;
+    color: $color-white;
+    cursor: pointer;
+  }
+  // H6 mail and phone
+  .contact-item {
+    margin: 10px;
+    display: inline;
+  }
+  .contact-item a {
+    color: $color-white;
+  }
+  .app-icons {
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 120px;
+  }
+  @media (min-width: 700px) {
+    .footer-container {
+      flex-direction: row;
+    }
+  }
+  
