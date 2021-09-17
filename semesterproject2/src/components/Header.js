@@ -1,6 +1,16 @@
-import { baseUrl } from "../settings/api.js";
+import React from "react";
+import { baseUrl } from "../settings/api";
 
-const productsUrl = baseUrl + "products";
+const HeroBanner = ({ data }) => {
+  console.log(data.url);
+  return (
+    <>
+      <img
+        src={`${baseUrl}${data.hero_banner.formats.large.url}`}
+        alt="Nailedit Nail polish"
+      />
+    </>
+  );
+};
 
-
-
+export default HeroBanner;

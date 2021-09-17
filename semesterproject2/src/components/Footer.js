@@ -7,31 +7,31 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-item">
         <div className="footer-item-inner">
-          <h5>Produkter & tjenester</h5>
+          <h5>Products</h5>
           <h6>Lorem ipsum</h6>
           <h6>Lorem ipsum</h6>
           <h6>Lorem ipsum</h6>
           <br />
-          <h5>iReg.no</h5>
+          <h5>Nailedit.com</h5>
           <h6>
-            iReg.no er utviklet av{" "}
-            <a href="https//:flexboks.no">Flexboks AS.</a>
+            Nailedit.com is developed by{" "}
+            <a href="https//:flexboks.no">Annika Engøy</a>
             <br />
-            Flexboks AS er et programmerings- <br />
-            og utviklingsselskap lokalisert i Mosjøen.
+            for Noroff School of Technology and Digital Media as a Semester
+            Project 2 assignment{" "}
           </h6>
         </div>
       </div>
       <div className="footer-item">
         <div className="footer-item-inner">
-          <h5>Kontakt oss</h5>
+          <h5>Contact us</h5>
           <h6>Lorem ipsum</h6>
           <h6>Lorem ipsum</h6>
           <h6>Lorem ipsum</h6>
           <br />
           <i className="fas fa-envelope">
             <h6 className="contact-item">
-              <a href="mailto:post@ireg.com">Post@ireg.no</a>
+              <a href="mailto:post@ireg.com">Post@nailedit.com</a>
             </h6>
           </i>
           <br />
@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
       <div className="footer-item">
         <div className="footer-item-inner">
-          <h5>Nyhetsbrev</h5>
+          <h5>Newsletter</h5>
           <form action="#">
             <div className="form-wrapper">
               <input
@@ -52,10 +52,10 @@ const Footer = () => {
                 type="text"
                 id="epost"
                 name="epost"
-                placeholder="Skriv inn epost adresse"
+                placeholder="Submit email adress"
               ></input>
               <button className="register" type="submit">
-                Registrer
+                Sign Up
               </button>
             </div>
           </form>

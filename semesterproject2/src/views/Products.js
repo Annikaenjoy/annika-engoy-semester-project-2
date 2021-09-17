@@ -8,9 +8,7 @@ import Products from "../components/Products";
 
 const productsUrl = baseUrl + "/products";
 
-
 const Productspage = () => {
-
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
@@ -18,28 +16,28 @@ const Productspage = () => {
       const response = await fetch(productsUrl);
       const json = await response.json();
       setProducts(json);
-      console.log(json)
-
-  } catch (error) {
+    } catch (error) {
       console.log(error);
-  }
-  }
+    }
+  };
 
   useEffect(() => {
     fetchProducts();
-  }, [])
+  }, []);
 
-
-    return (
-      <>
-            <Navbar />
-            <div className="wrapper">
-          <div className="body-container"> {products.map((prod, i) => (<Products data={prod}/>))}</div>
-         
+  return (
+    <>
+      <Navbar />
+      <div className="wrapper">
+        <div className="body-container">
+          {" "}
+          {products.map((prod) => (
+            <Products data={prod} key={prod.id} />
+          ))}
+        </div>
       </div>
-            <Footer/>
-      </>
-    );
-  };
-  export default Productspage;
-  
+      <Footer />
+    </>
+  );
+};
+export default Productspage;

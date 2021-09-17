@@ -1,45 +1,42 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-// import { useState } from "react";
-// import { useEffect } from "react";
-// import { baseUrl } from "../settings/api.js";
+import { useState } from "react";
+import { useEffect } from "react";
+import { baseUrl } from "../settings/api.js";
+import HeroBanner from "../components/Header";
 
-// const productsUrl = baseUrl + "products";
-
+const productsUrl = baseUrl + "/home";
 
 const Homepage = () => {
+  const [home, setHome] = useState([]);
 
-  // const [home, setHome] = useState({});
-
-  // const fetchProducts = async () => {
-  //   try {
-  //     const response = await fetch(productsUrl);
-  //     const json = await response.json();
-  //     setProducts(json);
-  //     console.log(json)
-
-  // } catch (error) {
-  //     console.log(error);
-  //     //displayMessage("error", error, ".product-container");
-  // }
-  // }
-
-  // useEffect(() => {
-  //   fetchProducts();
-  // }, [])
-
-    return (
-      <>
-        <Navbar />
-        {/* <div className="wrapper">
-          <div className="body-container">{heroBanner}</div>
-          {products.map((hero, i) => (<Product data={hero.home}/>))}
-      </div> */}
-  
-            <Footer/>
-      </>
-    );
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch(productsUrl);
+      const json = await response.json();
+      setHome(json);
+      console.log(json);
+    } catch (error) {
+      console.log(error);
+    }
   };
-  export default Homepage;
-  
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <div className="wrapper">
+        <div className="body-container">
+          {" "}
+          <HeroBanner data={home} key={home.id} />
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+export default Homepage;
