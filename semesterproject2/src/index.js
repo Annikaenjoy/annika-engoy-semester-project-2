@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import GlobalState from './context/GlobalState';
+import GlobalContext from './context/GlobalContext';
+
 
 ReactDOM.render(
   <React.StrictMode>
+       <GlobalState>
     <App />
+      </GlobalState>
   </React.StrictMode>,
   document.getElementById('root')
 );

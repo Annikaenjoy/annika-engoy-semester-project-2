@@ -1,0 +1,32 @@
+.login-wrapper {
+    display: flex;
+}
+.input-col{
+    width: 100%;
+    flex: 1;
+    margin: auto;
+
+}
+.image-col{
+    flex: 1;
+}
+.login {
+    width: 400px;
+    padding: 10px;
+    border: none;
+}
+.login-img {
+    width: 100%;
+}
+.login-btn {
+    width: 400px;
+    background-color: $color-secondary;
+    border: none;
+    color: $color-white;
+    padding: 10px;
+    margin-top: 10px;    
+}
+.h1-login {
+    color: $color-black;
+    text-align: center;
+}

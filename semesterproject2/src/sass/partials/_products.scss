@@ -1,3 +1,25 @@
-.prod-img {
+.prod-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+   
+}.prod-img {
     width: 100px;
+    margin: 20px;
+}
+
+.prod-item {
+    padding: 20px 50px;
+    margin: 20px;
+    background-color: $color-white;
+    text-align: center;
+}
+.prod-button {
+    margin: 15px 0 10px;
+    width: 80%;
+    padding: 10px;
+    background-color: $color-white;
+    border: 1px solid $color-black;
+    color: $color-black;
 }

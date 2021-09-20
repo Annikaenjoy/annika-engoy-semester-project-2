@@ -10,6 +10,9 @@ const Profilepage = () => {
             <Navbar />
             <div className="wrapper">
         <div className="body-container"></div>
+
+
+        <h1>ADMIN</h1>
             </div>
             <Footer/>
       </>

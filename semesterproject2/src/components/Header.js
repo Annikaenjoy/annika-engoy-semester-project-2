@@ -5,8 +5,8 @@ const HeroBanner = ({ data }) => {
   console.log(data.url);
   return (
     <>
-      <img
-        src={`${baseUrl}${data.hero_banner.formats.large.url}`}
+      <img className="herobanner"
+        src={`${baseUrl}${data.hero_banner?.formats.large.url}`}
         alt="Nailedit Nail polish"
       />
     </>

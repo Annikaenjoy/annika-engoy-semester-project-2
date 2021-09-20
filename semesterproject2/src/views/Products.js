@@ -25,15 +25,19 @@ const Productspage = () => {
     fetchProducts();
   }, []);
 
+
+  console.log(products[0])
+
   return (
     <>
       <Navbar />
       <div className="wrapper">
         <div className="body-container">
-          {" "}
+        <div className="prod-container">
           {products.map((prod) => (
             <Products data={prod} key={prod.id} />
           ))}
+          </div>
         </div>
       </div>
       <Footer />
